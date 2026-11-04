@@ -16,7 +16,7 @@ Tested on the game build with Unity 6000.3.9f1. A game update may break the mod.
 
 Every player needs to do this:
 
-1. Download [WKCoop-Setup-0.4.5.exe](https://github.com/HBMFOB/WK-Coop/raw/main/WKCoop-Setup-0.4.5.exe).
+1. Download [WKCoop-Setup-0.4.7.exe](https://github.com/HBMFOB/WK-Coop/raw/main/WKCoop-Setup-0.4.7.exe).
 2. Run it and press Install. The installer finds the game in your Steam libraries and installs the mod together with BepInEx 5.4.23.6. If the game is not found, choose its folder manually.
 
 The file is not signed, so Windows SmartScreen may warn about an unknown publisher. If it does, press More info → Run anyway.
@@ -55,6 +55,7 @@ The installer and the F9 mod window each have a language button. Both start in R
 - **Items.** When one player picks up an item, it disappears for everyone. Each player has their own money, and a purchased item drops for everyone. Each player gets their own starter kit at the beginning of the Nest, freeze gun in Chimney and scanner at the Parasite entrance.
 - **Pistol.** Each player has their own pistol, and a hit on a teammate deals damage.
 - **Skins.** A teammate's hands and held item show their own skin and palette.
+- **Player models (experimental).** Instead of a capsule, a teammate can look like a 3D model: Harpy, Carrot, Miku or Teto. Each player picks their own: F9 → Your skin → Choose…. The models are built into the mod, and a teammate sees you as your model if they also run version 0.4.7 or newer. The models move on their own from what the player does: they walk, reach for handholds, hold items and wave their arms when falling, and Miku, Teto and Carrot change their facial expression.
 - **Pause** is shared: if someone opens the pause menu, the world freezes for everyone.
 - **Joining mid-run.** If the host allows it, a player who joins stays a spectator until the run ends. After that you should be able to play together.
 - **Saves.** Disk saves are disabled in co-op: they are not needed, and they also partly changed the seeds, which caused desync. Every run starts fresh. Co-op runs are not sent to the Steam leaderboards.
@@ -76,6 +77,7 @@ File: `BepInEx\config\com.wkcoop.whiteknuckle.cfg`. It appears after the first l
 | `AllowJoinMidRun` | allow joining during a run as a spectator |
 | `BlockLeaderboardsInCoop` | do not send co-op runs to the leaderboards |
 | `MaxPlayers`, `Port`, `SendRate`, `MenuKey`, `ShowNameTags` | player limit, port, send rate, window key, name tags above players |
+| `Skin` | your player model: `harpy`, `luuvan` (Carrot), `miku`, `teto`; empty means a capsule |
 
 `RespawnDelay`, `RespawnOnlyInSafeRooms` and `SyncDenizens` come from the host and are sent to everyone when a run starts.
 
@@ -90,10 +92,10 @@ Launch options (Steam → Properties → Launch Options):
 
 ## Known limitations
 
-- Ropes, chains and tentacles are not displayed correctly for players other than the host.
-- The Mass has display problems with its tail in Abyss.
 - Events and challenges do not work correctly: roaches are not counted for everyone in Roach Run, and the doors in Parasite do not open correctly, so everyone has to run through at once.
 - Items are not always picked up and dropped from the inventory correctly by other players, so they can be duplicated, or accidentally sold to the roach or ground up. This will not stop your progress and all items work, but it can spoil a run.
+- Switching the shutters in the Nest kills the second player.
+- The Mother grabs only one player, and the others get stuck out of bounds (if respawn is not limited to safe rooms, you can shoot your teammate with the pistol so they respawn).
 
 If something does not work, check `BepInEx\LogOutput.log`: mod errors are written there.
 
