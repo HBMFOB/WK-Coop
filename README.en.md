@@ -16,7 +16,7 @@ Tested on the game build with Unity 6000.3.9f1. A game update may break the mod.
 
 Every player needs to do this:
 
-1. Download [WKCoop-Setup-0.4.10.exe](https://github.com/HBMFOB/WK-Coop/raw/main/WKCoop-Setup-0.4.10.exe).
+1. Download [WKCoop-Setup-0.4.11.exe](https://github.com/HBMFOB/WK-Coop/raw/main/WKCoop-Setup-0.4.11.exe).
 2. Run it and press Install. The installer finds the game in your Steam libraries and installs the mod together with BepInEx 5.4.23.6. If the game is not found, choose its folder manually.
 
 The file is not signed, so Windows SmartScreen may warn about an unknown publisher. If it does, press More info → Run anyway.
