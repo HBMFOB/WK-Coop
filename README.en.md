@@ -12,11 +12,13 @@ An unofficial mod that turns White Knuckle into a co-op game for 2–4 players.
 
 Tested on the game build with Unity 6000.3.9f1. A game update may break the mod.
 
+Mod version 0.4.12 is for the game version with the Core location (the November 2026 update). It does not work on older game versions, and mod 0.4.11 and earlier do not work on the new one.
+
 ## Installation
 
 Every player needs to do this:
 
-1. Download [WKCoop-Setup-0.4.11.exe](https://github.com/HBMFOB/WK-Coop/raw/main/WKCoop-Setup-0.4.11.exe).
+1. Download [WKCoop-Setup-0.4.12.exe](https://github.com/HBMFOB/WK-Coop/raw/main/WKCoop-Setup-0.4.12.exe).
 2. Run it and press Install. The installer finds the game in your Steam libraries and installs the mod together with BepInEx 5.4.23.6. If the game is not found, choose its folder manually.
 
 The file is not signed, so Windows SmartScreen may warn about an unknown publisher. If it does, press More info → Run anyway.
@@ -103,6 +105,7 @@ Launch options (Steam → Properties → Launch Options):
 - In Body Cavity, key-locked doors get out of sync.
 - Other players do not see the amalgamator at work.
 - If a player dies near the core, the game does not treat the floor in the finale as "safe" and does not respawn the dead.
+- The Core location from the new game update has only been tested in parts with the mod; nobody has played through it as two yet.
 
 If something does not work, check `BepInEx\LogOutput.log`: mod errors are written there.
 
